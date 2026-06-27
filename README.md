@@ -122,6 +122,125 @@ We have pre-seeded two demo accounts in `data.sql` with encrypted passwords for 
    - Paste your **Groq API Key** directly into the input slot in the UI's console header. It is temporarily applied to queries and not stored on the server for safety.
 
 ---
+---
+
+# 📸 Application Screenshots
+
+## 🏠 Landing Page
+
+<p align="center">
+  <img src="WebPages_images/About.png" width="100%">
+</p>
+
+---
+
+## ✨ Features & Collections Section
+
+<p align="center">
+  <img src="WebPages_images/Collections.png" width="100%">
+</p>
+
+---
+
+## 🤖 AI Shopkeeper Dashboard
+
+<p align="center">
+  <img src="WebPages_images/AI_AGENT1.png" width="100%">
+</p>
+
+---
+
+## 💬 AI Recommendation Response
+
+<p align="center">
+  <img src="WebPages_images/AI_AGENT2.png" width="100%">
+</p>
+
+---
+
+## 📦 Live Inventory Catalog
+
+<p align="center">
+  <img src="WebPages_images/Available_items.png" width="30%">
+</p>
+
+---
+
+## 🛒 Manual Order Workflow
+
+<table align="center">
+<tr>
+<td align="center">
+
+### Select Footwear Category
+
+<img src="WebPages_images/place_order1.png" width="250"/>
+
+</td>
+
+<td align="center">
+
+### Select Product
+
+<img src="WebPages_images/place_order2.png" width="250"/>
+
+</td>
+</tr>
+
+<tr>
+<td align="center">
+
+### Configure Product Specifications
+
+<img src="WebPages_images/place_order3.png" width="250"/>
+
+</td>
+
+<td align="center">
+
+### Shipping Details
+
+<img src="WebPages_images/proceed_to_pay.png" width="250"/>
+
+</td>
+</tr>
+</table>
+
+---
+
+## 💳 Payment Options
+
+<p align="center">
+  <img src="WebPages_images/payment_options.png" width="300">
+</p>
+
+---
+
+## 🎯 Complete User Journey
+
+```text
+Landing Page
+      ↓
+Login / Registration
+      ↓
+AI Shopkeeper Interaction
+      ↓
+Browse Inventory
+      ↓
+Select Product Category
+      ↓
+Choose Product
+      ↓
+Configure Size & Color
+      ↓
+Enter Shipping Details
+      ↓
+Select Payment Option
+      ↓
+Order Confirmation
+```
+
+---
 
 ## 🛠️ Developer Configurations & Guides
 - Review **[ECLIPSE_GUIDE.md](file:///d:/Intern_Projects/AGENTIC_AI_PROJECT_MANDELBULB/ECLIPSE_GUIDE.md)** for importing the Maven folder in Eclipse IDE.
