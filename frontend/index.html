@@ -1,0 +1,935 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Branded Shoe Store Agent</title>
+    <!-- Google Fonts: Inter and Outfit -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;600;700;800&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
+    <!-- FontAwesome for Premium Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Glow Background Blobs -->
+    <div class="bg-glow blob-1"></div>
+    <div class="bg-glow blob-2"></div>
+    <div class="bg-glow blob-3"></div>
+
+    <!-- Notification Toast -->
+    <div id="toast" class="toast hidden"></div>
+
+    <!-- ================= HOMEPAGE VIEW ================= -->
+    <div id="homepage-view" class="homepage-container">
+        <!-- Hero Banner Header -->
+        <header class="home-navbar">
+            <div class="logo">
+                <i class="fa-solid fa-shoe-prints"></i>
+                <span>SHOE.AI</span>
+            </div>
+            <div class="home-nav-links">
+                <a href="#about-section">About Store</a>
+                <a href="#collection-section">Collection</a>
+                <button id="btn-theme-toggle-home" class="btn btn-secondary" style="border-radius:50%; width:40px; height:40px; padding:0; display:flex; align-items:center; justify-content:center;" title="Toggle Dark/Light Mode"><i class="fa-solid fa-moon"></i></button>
+                <button id="home-login-btn" class="btn btn-secondary">Log In</button>
+                <button id="home-register-btn" class="btn btn-purple">Register</button>
+            </div>
+        </header>
+
+        <section class="hero-section">
+            <div class="hero-content">
+                <span class="badge badge-purple">Next-Gen AI Shoe Store</span>
+                <h1>Walk into the Future of Footwear</h1>
+                <p>Welcome to mandelbulb's SHOE.AI, a fully integrated retail platform powered by a real-time agentic AI shopkeeper. Discover top-tier brands like Campus, Nike, Skechers, Puma, and Sparx with instant price sync, tracking, and custom recommendations.</p>
+                <div class="hero-actions">
+                    <button id="btn-explore-collection" class="btn btn-purple btn-large">
+                        <span>Explore Collection</span> <i class="fa-solid fa-arrow-down"></i>
+                    </button>
+                    <button id="btn-chat-now" class="btn btn-primary btn-large">
+                        <span>Talk to AI Shopkeeper</span> <i class="fa-solid fa-robot"></i>
+                    </button>
+                </div>
+            </div>
+            <!-- Interactive Floating Showcase -->
+            <div class="hero-visual">
+                <div class="visual-glow"></div>
+                <img src="images/shoes.png" alt="Premium Shoe" class="floating-shoe">
+            </div>
+        </section>
+
+        <!-- About App Features Section -->
+        <section id="about-section" class="features-section">
+            <div class="section-title">
+                <h2>Our Advanced Features</h2>
+                <p>Why SHOE.AI is the ultimate platform for branded footwear shopping</p>
+            </div>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <i class="fa-solid fa-robot text-purple"></i>
+                    <h3>AI Shopkeeper</h3>
+                    <p>Our intelligent agent acts like a real store assistant. Ask about specific colors, sizes, or brands, and get instant recommendations!</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fa-solid fa-rotate text-indigo"></i>
+                    <h3>Live Scraping Sync</h3>
+                    <p>Real-time data synchronization directly from Amazon, Flipkart, Myntra, and Reddit to compare prices and review scores dynamically.</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fa-solid fa-shield-halved text-success"></i>
+                    <h3>Double Verification</h3>
+                    <p>Secured user registration protected by dual-channel OTP verification (Email verification and Mobile SMS OTP).</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Dynamic Category Showcase -->
+        <section id="collection-section" class="collection-section">
+            <div class="section-title">
+                <h2>Astonishing Footwear Collection</h2>
+                <p>Top-tier models designed for performance, comfort, and luxury style</p>
+            </div>
+            <div class="collection-grid">
+                <!-- Shoe Card -->
+                <div class="category-card">
+                    <div class="cat-img-wrapper">
+                        <img src="images/shoes.png" alt="Premium Shoes">
+                    </div>
+                    <div class="cat-info">
+                        <h3>Sneakers & Running Shoes</h3>
+                        <p>High-performance designs from Nike, Puma & Campus. Perfect for sports and street wear.</p>
+                    </div>
+                </div>
+                <!-- Heels Card -->
+                <div class="category-card">
+                    <div class="cat-img-wrapper">
+                        <img src="images/heels.png" alt="Luxury Heels">
+                    </div>
+                    <div class="cat-info">
+                        <h3>Luxury High Heels</h3>
+                        <p>Elegant, crystal-studded glassmorphic high heels designed for parties and premium styling.</p>
+                    </div>
+                </div>
+                <!-- Boots Card -->
+                <div class="category-card">
+                    <div class="cat-img-wrapper">
+                        <img src="images/boots.png" alt="Outdoor Boots">
+                    </div>
+                    <div class="cat-info">
+                        <h3>Rugged Outdoor Boots</h3>
+                        <p>Durable and stylish dark leather boots. Ready to tackle any terrain or season.</p>
+                    </div>
+                </div>
+                <!-- Slippers Card -->
+                <div class="category-card">
+                    <div class="cat-img-wrapper">
+                        <img src="images/slippers.png" alt="Comfort Slippers">
+                    </div>
+                    <div class="cat-info">
+                        <h3>Comfort Slippers & Sandals</h3>
+                        <p>Lightweight sliders and sandals designed for maximum indoor comfort and easy daily wear.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <footer class="home-footer">
+            <p>&copy; 2026 SHOE.AI by Mandelbulb. Powered by Agentic AI. All rights reserved.</p>
+        </footer>
+    </div>
+
+    <!-- ================= AUTH VIEW ================= -->
+    <div id="auth-view" class="auth-container">
+        <div class="auth-card">
+            <div class="auth-header">
+                <div class="logo">
+                    <i class="fa-solid fa-shoe-prints"></i>
+                    <span>SHOE.AI</span>
+                </div>
+                <h2>Welcome Back</h2>
+                <p>Login or create your account to talk with our AI Shopkeeper</p>
+            </div>
+
+            <!-- Login Form -->
+            <form id="login-form" class="auth-form">
+                <div class="input-group">
+                    <label for="login-username"><i class="fa-solid fa-user"></i> Username</label>
+                    <input type="text" id="login-username" placeholder="Enter username (e.g. customer)" required>
+                </div>
+                <div class="input-group">
+                    <label for="login-password"><i class="fa-solid fa-lock"></i> Password</label>
+                    <input type="password" id="login-password" placeholder="Enter password (e.g. customer123)" required>
+                </div>
+                <button type="submit" class="btn btn-primary btn-block">
+                    <span>Log In</span> <i class="fa-solid fa-arrow-right-to-bracket"></i>
+                </button>
+                <div class="auth-divider"><span>OR</span></div>
+                <button type="button" id="btn-google-signin" class="btn btn-google btn-block">
+                    <i class="fa-brands fa-google"></i> <span>Sign in with Google</span>
+                </button>
+                <div class="auth-switch">
+                    Don't have an account? <a href="#" id="show-register">Register here</a>
+                </div>
+            </form>
+
+            <!-- Register Form -->
+            <form id="register-form" class="auth-form hidden">
+                <div class="input-group">
+                    <label for="reg-username"><i class="fa-solid fa-user"></i> Username</label>
+                    <input type="text" id="reg-username" placeholder="Choose a username" required>
+                </div>
+                <div class="input-group">
+                    <label for="reg-email"><i class="fa-solid fa-envelope"></i> Email Address</label>
+                    <input type="email" id="reg-email" placeholder="Enter email for notifications" required>
+                </div>
+                <div class="input-group">
+                    <label for="reg-contact"><i class="fa-solid fa-phone"></i> Contact Number</label>
+                    <input type="text" id="reg-contact" placeholder="e.g. +919876543210" required>
+                </div>
+                <div class="input-group">
+                    <label for="reg-password"><i class="fa-solid fa-lock"></i> Password</label>
+                    <input type="password" id="reg-password" placeholder="Min. 6 characters" required>
+                </div>
+                <div class="input-group">
+                    <label for="reg-role"><i class="fa-solid fa-users-gear"></i> Role Type</label>
+                    <select id="reg-role">
+                        <option value="CUSTOMER">Customer (Default)</option>
+                        <option value="ADMIN">Administrator</option>
+                    </select>
+                </div>
+                <button type="submit" class="btn btn-purple btn-block">
+                    <span>Register</span> <i class="fa-solid fa-user-plus"></i>
+                </button>
+                <div class="auth-switch">
+                    Already have an account? <a href="#" id="show-login">Login here</a>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- ================= MAIN WORKSPACE ================= -->
+    <div id="workspace-view" class="workspace hidden">
+        
+        <!-- Top Navbar -->
+        <header class="navbar">
+            <div class="nav-left">
+                <div class="logo">
+                    <i class="fa-solid fa-shoe-prints"></i>
+                    <span>SHOE.AI</span>
+                    <span class="badge badge-indigo">AI Shopkeeper</span>
+                </div>
+            </div>
+            
+            <div class="nav-actions">
+                <button id="btn-theme-toggle-work" class="btn btn-nav" style="background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.15);" title="Toggle Dark/Light Mode">
+                    <i class="fa-solid fa-moon"></i> <span id="theme-btn-text">Dark Mode</span>
+                </button>
+                <button id="btn-back-home" class="btn btn-nav" style="background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.15);">
+                    <i class="fa-solid fa-house"></i> <span>Home Page</span>
+                </button>
+                <button id="btn-toggle-catalog" class="btn btn-nav">
+                    <i class="fa-solid fa-boxes-stacked"></i> <span>Data Catalog</span>
+                </button>
+                <button id="btn-open-orders" class="btn btn-nav">
+                    <i class="fa-solid fa-truck-ramp-box"></i> <span>Track Orders</span>
+                </button>
+                <button id="btn-open-manual-order" class="btn btn-nav" style="background: rgba(168, 85, 247, 0.15); border: 1px solid rgba(168, 85, 247, 0.3);">
+                    <i class="fa-solid fa-cart-flatbed-suitcases"></i> <span>Manual Order</span>
+                </button>
+                <button id="btn-admin-portal" class="btn btn-nav hidden">
+                    <i class="fa-solid fa-gears"></i> <span class="btn-text">Admin Panel</span>
+                </button>
+                <button id="btn-open-profile" class="btn btn-nav">
+                    <i class="fa-solid fa-address-card"></i> <span>Profile</span>
+                </button>
+                <div class="user-badge">
+                    <i class="fa-solid fa-circle-user"></i>
+                    <span id="user-display-name">customer</span>
+                    <span id="user-display-role" class="badge">CUSTOMER</span>
+                </div>
+                <button id="btn-logout" class="btn btn-icon" title="Log Out">
+                    <i class="fa-solid fa-right-from-bracket"></i>
+                </button>
+            </div>
+        </header>
+
+        <!-- Dynamic Grid Content -->
+        <div class="grid-content" id="workspace-grid">
+            
+            <!-- Left panel: Chat Interface -->
+            <section class="panel chat-panel">
+                <div class="panel-header header-flex">
+                    <div>
+                        <h3><i class="fa-solid fa-comments"></i> Talk with our AI Shopkeeper</h3>
+                        <p>Ask about Campus, Nike, Skechers, Puma, & Sparx availability or track your order</p>
+                    </div>
+                    <button id="btn-toggle-history" class="btn btn-secondary btn-nav">
+                        <i class="fa-solid fa-clock-rotate-left"></i> History
+                    </button>
+                </div>
+                
+                <div id="chat-messages" class="chat-messages">
+                    <!-- Sample Greeting Message -->
+                    <div class="msg msg-ai">
+                        <div class="avatar"><i class="fa-solid fa-robot"></i></div>
+                        <div class="msg-content">
+                            <p>Greetings! I am your AI Shopkeeper running our store. We sell top-brand shoes: Campus, Nike, Skechers, Puma, and Sparx. Ask me for specific colors, brands, and sizes, or track your orders!</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Suggested Query Chips -->
+                <div class="prompt-chips-container">
+                    <span class="chips-label"><i class="fa-solid fa-lightbulb"></i> Suggested prompts:</span>
+                    <div class="chips-wrapper">
+                        <button class="chip" data-prompt="Show Nike shoes in size 8 and black color">Show Black Nike Size 8</button>
+                        <button class="chip" data-prompt="Is there a cheaper alternative for my order ORD-1002?">Save on ORD-1002</button>
+                        <button class="chip" data-prompt="Where is my order ORD-1001?">Track ORD-1001</button>
+                        <button class="chip" data-prompt="Recommend me the best rated shoes">Best Rated Shoes</button>
+                        <button class="chip" data-prompt="I want Puma shoes of blue color and size 8">Blue Puma Size 8</button>
+                    </div>
+                </div>
+
+                <!-- Chat Input form -->
+                <form id="chat-form" class="chat-input-area">
+                    <input type="text" id="chat-input" placeholder="Type a message to the AI Shopkeeper (e.g. Is there a cheaper alternative to ORD-1002?)..." required autocomplete="off">
+                    <button type="submit" class="btn btn-primary btn-round">
+                        <i class="fa-solid fa-paper-plane"></i>
+                    </button>
+                </form>
+            </section>
+
+            <!-- Right panel: Chat History Panel -->
+            <section class="panel history-panel" id="history-panel">
+                <div class="panel-header header-flex">
+                    <div>
+                        <h3><i class="fa-solid fa-clock-rotate-left text-purple"></i> Chat History</h3>
+                        <p>Recall your previous questions and conversations</p>
+                    </div>
+                    <button id="btn-clear-history" class="btn btn-danger btn-icon" title="Clear History">
+                        <i class="fa-solid fa-trash-can"></i>
+                    </button>
+                </div>
+                
+                <div class="console-body" style="background: rgba(255, 255, 255, 0.75); box-shadow: none; margin: 15px 20px 20px;">
+                    <div id="history-list" class="history-list">
+                        <!-- Dynamic history cards will be inserted here -->
+                        <div class="no-history">
+                            <i class="fa-solid fa-history"></i>
+                            <p>No chat history in this session yet.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+        </div>
+    </div>
+
+    <!-- ================= SLIDE-OUT DATA CATALOG DRAWER ================= -->
+    <div id="catalog-drawer" class="catalog-drawer">
+        <div class="drawer-header">
+            <h3><i class="fa-solid fa-boxes-stacked"></i> Live Database Inventory</h3>
+            <button id="btn-close-catalog" class="btn btn-close"><i class="fa-solid fa-xmark"></i></button>
+        </div>
+
+        <!-- Filter Bar -->
+        <div class="drawer-filters">
+            <div class="filter-group">
+                <label for="filter-brand">Brand</label>
+                <select id="filter-brand">
+                    <option value="">All Brands</option>
+                </select>
+            </div>
+            <div class="filter-group">
+                <label for="filter-color">Color</label>
+                <select id="filter-color">
+                    <option value="">All Colors</option>
+                </select>
+            </div>
+            <div class="filter-group">
+                <label for="filter-size">Size</label>
+                <select id="filter-size">
+                    <option value="">All Sizes</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="drawer-content">
+            <div id="catalog-list" class="catalog-grid">
+                <!-- Seeding dynamic catalog products -->
+            </div>
+        </div>
+    </div>
+    <div id="drawer-overlay" class="drawer-overlay hidden"></div>
+
+    <!-- ================= ADMIN PORTAL MODAL ================= -->
+    <div id="admin-modal" class="modal-overlay hidden">
+        <div class="admin-modal-card">
+            <div class="modal-header">
+                <h3><i class="fa-solid fa-gears text-purple"></i> Admin Inventory Management</h3>
+                <button id="btn-close-admin" class="btn btn-close"><i class="fa-solid fa-xmark"></i></button>
+            </div>
+            
+            <div class="admin-modal-body">
+                <!-- Left half: Form to add Product -->
+                <div class="admin-form-section">
+                    <h4>Add New Shoe to Catalog</h4>
+                    <form id="admin-add-product-form">
+                        <div class="admin-form-grid">
+                            <div class="input-group">
+                                <label for="prod-id">Product ID</label>
+                                <input type="text" id="prod-id" placeholder="e.g. P106" required>
+                            </div>
+                            <div class="input-group">
+                                <label for="prod-brand">Brand</label>
+                                <select id="prod-brand" required>
+                                    <option value="Campus">Campus</option>
+                                    <option value="Nike">Nike</option>
+                                    <option value="Skechers">Skechers</option>
+                                    <option value="Puma">Puma</option>
+                                    <option value="Sparx">Sparx</option>
+                                </select>
+                            </div>
+                            <div class="input-group">
+                                <label for="prod-name">Shoe Name</label>
+                                <input type="text" id="prod-name" placeholder="e.g. Air Zoom Flight" required>
+                            </div>
+                            <div class="input-group">
+                                <label for="prod-color">Color</label>
+                                <select id="prod-color" required>
+                                    <option value="Black">Black</option>
+                                    <option value="White">White</option>
+                                    <option value="Red">Red</option>
+                                    <option value="Blue">Blue</option>
+                                    <option value="Grey">Grey</option>
+                                </select>
+                            </div>
+                            <div class="input-group">
+                                <label for="prod-size">Size No.</label>
+                                <input type="number" id="prod-size" min="5" max="15" placeholder="8" required>
+                            </div>
+                            <div class="input-group">
+                                <label for="prod-price">Price (₹)</label>
+                                <input type="number" id="prod-price" min="100" step="0.01" placeholder="4999.00" required>
+                            </div>
+                            <div class="input-group">
+                                <label for="prod-stock">Stock Count</label>
+                                <input type="number" id="prod-stock" min="0" placeholder="15" required>
+                            </div>
+                            <div class="input-group">
+                                <label for="prod-rating">Rating (Optional)</label>
+                                <input type="number" id="prod-rating" min="1.0" max="5.0" step="0.1" placeholder="4.5">
+                            </div>
+                        </div>
+                        <div class="input-group">
+                            <label for="prod-desc">Product Description</label>
+                            <textarea id="prod-desc" placeholder="Enter shoe features, comfort details, etc." rows="3"></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-purple btn-block">
+                            <i class="fa-solid fa-plus"></i> Add Item to Inventory
+                        </button>
+                    </form>
+                </div>
+
+                <!-- Right half: List of Products with Delete Buttons -->
+                <div class="admin-list-section">
+                    <h4>Current Store Inventory</h4>
+                    <div class="admin-inventory-table-wrapper">
+                        <table class="admin-inventory-table">
+                            <thead>
+                                <tr>
+                                    <th>ID</th>
+                                    <th>Product</th>
+                                    <th>Specs</th>
+                                    <th>Price</th>
+                                    <th>Actions</th>
+                                </tr>
+                            </thead>
+                            <tbody id="admin-inventory-list">
+                                <!-- Seeding dynamic rows -->
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Danger Zone: Permanent Account Deletion -->
+            <div class="admin-modal-footer">
+                <div class="delete-account-zone">
+                    <p class="text-secondary"><i class="fa-solid fa-triangle-exclamation text-yellow"></i> Account Operations: You can permanently delete your personal account if desired.</p>
+                    <button id="btn-delete-account" class="btn btn-danger">
+                        <i class="fa-solid fa-trash-can"></i> Delete My Account
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ================= DOUBLE VERIFICATION PANEL MODAL ================= -->
+    <div id="verify-modal" class="modal-overlay hidden">
+        <div class="confirm-card" style="max-width: 480px;">
+            <i class="fa-solid fa-shield-halved text-purple" style="font-size: 2.5rem; margin-bottom: 10px;"></i>
+            <h3>Email Verification Required</h3>
+            <p>Please verify your email address to activate your account. You can find your verification code in your developer trace console logs or your email inbox!</p>
+            
+            <div class="auth-form" style="width: 100%; text-align: left; margin-top: 15px;">
+                <div class="input-group">
+                    <label><i class="fa-solid fa-envelope-open-text"></i> Email Verification Code</label>
+                    <div style="display:flex; gap:10px;">
+                        <input type="text" id="verify-email-code" placeholder="e.g. EMAIL-123456" style="flex:1;">
+                        <button type="button" id="btn-verify-email" class="btn btn-primary" style="padding: 10px 15px;">Verify</button>
+                    </div>
+                    <span id="email-verify-status" class="text-secondary" style="font-size:0.75rem; margin-top:3px;"><i class="fa-solid fa-circle-question"></i> Pending verification</span>
+                </div>
+            </div>
+
+            <div style="display:flex; gap:15px; width:100%; margin-top:20px;">
+                <button id="btn-resend-codes" class="btn btn-secondary" style="flex:1;">Resend Code</button>
+                <button id="btn-verification-close" class="btn btn-danger" style="flex:1;">Cancel</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- ================= GOOGLE LOG-IN CHOOSER MODAL ================= -->
+    <div id="google-chooser-modal" class="modal-overlay hidden">
+        <div class="confirm-card" style="max-width: 420px;">
+            <i class="fa-brands fa-google text-purple" style="font-size: 2.5rem; margin-bottom: 10px;"></i>
+            <h3>Sign in with Google</h3>
+            <p>Choose a simulated account to login instantly</p>
+            
+            <div class="google-accounts-list" style="margin-top: 20px; width: 100%; display: flex; flex-direction: column; gap: 10px;">
+                <div class="google-account-item" data-email="shoelover@gmail.com" data-name="Shoe Lover" style="display:flex; align-items:center; gap:15px; padding: 12px; background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.08); border-radius: 8px; cursor: pointer; transition: all 0.2s;">
+                    <div class="google-avatar" style="width:36px; height:36px; border-radius:50%; background:var(--gradient-purple); display:flex; align-items:center; justify-content:center; color:#fff;"><i class="fa-solid fa-user"></i></div>
+                    <div class="google-acc-details" style="display:flex; flex-direction:column; text-align:left;">
+                        <span class="acc-name" style="font-weight:600; font-size:0.9rem;">Shoe Lover</span>
+                        <span class="acc-email" style="font-size:0.75rem; color:#888;">shoelover@gmail.com</span>
+                    </div>
+                </div>
+                <div class="google-account-item" data-email="mandelbulb.tester@gmail.com" data-name="Mandelbulb Tester" style="display:flex; align-items:center; gap:15px; padding: 12px; background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.08); border-radius: 8px; cursor: pointer; transition: all 0.2s;">
+                    <div class="google-avatar" style="width:36px; height:36px; border-radius:50%; background:var(--gradient-blue); display:flex; align-items:center; justify-content:center; color:#fff;"><i class="fa-solid fa-user-gear"></i></div>
+                    <div class="google-acc-details" style="display:flex; flex-direction:column; text-align:left;">
+                        <span class="acc-name" style="font-weight:600; font-size:0.9rem;">Mandelbulb Tester</span>
+                        <span class="acc-email" style="font-size:0.75rem; color:#888;">mandelbulb.tester@gmail.com</span>
+                    </div>
+                </div>
+                <div class="google-account-item" data-email="guest.buyer@gmail.com" data-name="Guest Buyer" style="display:flex; align-items:center; gap:15px; padding: 12px; background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.08); border-radius: 8px; cursor: pointer; transition: all 0.2s;">
+                    <div class="google-avatar" style="width:36px; height:36px; border-radius:50%; background:rgba(255,255,255,0.1); display:flex; align-items:center; justify-content:center; color:#fff;"><i class="fa-solid fa-circle-user"></i></div>
+                    <div class="google-acc-details" style="display:flex; flex-direction:column; text-align:left;">
+                        <span class="acc-name" style="font-weight:600; font-size:0.9rem;">Guest Buyer</span>
+                        <span class="acc-email" style="font-size:0.75rem; color:#888;">guest.buyer@gmail.com</span>
+                    </div>
+                </div>
+            </div>
+            
+            <button id="btn-close-google" class="btn btn-secondary btn-block" style="margin-top: 20px;">Cancel</button>
+        </div>
+    </div>
+
+    <!-- ================= USER PROFILE MODAL ================= -->
+    <div id="profile-modal" class="modal-overlay hidden">
+        <div class="confirm-card" style="max-width: 480px; text-align: left;">
+            <div class="modal-header" style="margin-bottom: 20px; display:flex; justify-content:space-between; align-items:center;">
+                <h3><i class="fa-solid fa-user-gear text-purple"></i> My Profile Details</h3>
+                <button id="btn-close-profile" class="btn btn-close"><i class="fa-solid fa-xmark"></i></button>
+            </div>
+            
+            <div class="profile-modal-body">
+                <div class="input-group">
+                    <label><i class="fa-solid fa-circle-user"></i> Username</label>
+                    <input type="text" id="profile-username" readonly style="background: rgba(255,255,255,0.05); color: #ccc; cursor: not-allowed;">
+                </div>
+                
+                <div class="input-group" style="margin-top: 15px;">
+                    <label><i class="fa-solid fa-envelope"></i> Email Address</label>
+                    <input type="email" id="profile-email" required disabled>
+                </div>
+                
+                <div class="input-group" style="margin-top: 15px;">
+                    <label><i class="fa-solid fa-phone"></i> Contact Number</label>
+                    <input type="text" id="profile-contact" required disabled>
+                </div>
+                
+                <div class="input-group" style="margin-top: 15px;">
+                    <label><i class="fa-solid fa-id-card"></i> Account Role</label>
+                    <div style="margin-top:5px;"><span id="profile-role-badge" class="badge">CUSTOMER</span></div>
+                </div>
+            </div>
+            
+            <div class="profile-actions" style="margin-top: 25px; display:flex; gap:10px;">
+                <button id="btn-edit-profile" class="btn btn-purple" style="flex:1;">
+                    <i class="fa-solid fa-pen-to-square"></i> Edit Profile
+                </button>
+                <button id="btn-save-profile" class="btn btn-primary hidden" style="flex:1;">
+                    <i class="fa-solid fa-floppy-disk"></i> Save Changes
+                </button>
+                <button id="btn-cancel-profile" class="btn btn-secondary hidden" style="flex:1;">
+                    Cancel
+                </button>
+            </div>
+
+            <!-- Danger Zone for account deletion -->
+            <div style="margin-top: 25px; border-top: 1px dashed rgba(239, 68, 68, 0.2); padding-top: 15px;">
+                <h4 style="color: var(--color-danger); font-size: 0.85rem; margin-bottom: 10px; font-weight:600;"><i class="fa-solid fa-triangle-exclamation"></i> Danger Zone</h4>
+                <button id="btn-delete-account" class="btn btn-danger btn-block">
+                    <i class="fa-solid fa-trash-can"></i> Delete Account Permanently
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Delete Account Confirmation Modal -->
+    <div id="confirm-modal" class="confirm-modal-overlay hidden">
+        <div class="confirm-card">
+            <i class="fa-solid fa-triangle-exclamation confirm-icon"></i>
+            <h3>Delete Account Permanently?</h3>
+            <p>Are you sure you want to permanently delete your account? This action cannot be undone and you will lose your conversation history.</p>
+            <div class="confirm-actions">
+                <button id="confirm-delete-cancel" class="btn btn-secondary">Cancel</button>
+                <button id="confirm-delete-ok" class="btn btn-danger">Permanently Delete</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- ================= CHECKOUT & PAYMENT MODAL ================= -->
+    <div id="checkout-modal" class="modal-overlay hidden">
+        <div class="confirm-card" style="max-width: 500px; text-align: left;">
+            <div class="modal-header" style="margin-bottom: 15px; display:flex; justify-content:space-between; align-items:center;">
+                <h3><i class="fa-solid fa-credit-card text-purple"></i> Secure Checkout</h3>
+                <button id="btn-close-checkout" class="btn btn-close"><i class="fa-solid fa-xmark"></i></button>
+            </div>
+            
+            <div class="checkout-modal-body" id="checkout-step-1">
+                <!-- Product Details Summary -->
+                <div class="product-summary-card" style="background: rgba(168,85,247,0.05); border: 1px solid var(--border-color); padding: 15px; border-radius: 8px; margin-bottom: 20px; display:flex; justify-content:space-between; align-items:center;">
+                    <div>
+                        <h4 id="checkout-prod-name" style="font-weight:700; color:var(--text-primary);">Shoe Name</h4>
+                        <span id="checkout-prod-brand" class="badge badge-indigo">Brand</span>
+                        <div id="checkout-prod-specs" style="font-size:0.75rem; color:var(--text-secondary); margin-top:5px;">Size: 8 | Color: Blue</div>
+                    </div>
+                    <div id="checkout-prod-price" style="font-family:var(--font-heading); font-weight:800; font-size:1.2rem; color:var(--color-primary);">₹0.00</div>
+                </div>
+
+                <!-- Delivery details form -->
+                <h4 style="font-weight:600; font-size:0.9rem; margin-bottom: 10px; color:var(--text-primary);"><i class="fa-solid fa-truck"></i> Shipping Information</h4>
+                <div class="input-group">
+                    <label>Delivery Address</label>
+                    <input type="text" id="checkout-address" placeholder="Flat No, Building, Street, Area..." required>
+                </div>
+                <div class="input-group" style="margin-top: 10px;">
+                    <label>Contact Number</label>
+                    <input type="text" id="checkout-contact" placeholder="Mobile number for delivery updates" required>
+                </div>
+
+                <button id="btn-goto-payment" class="btn btn-primary btn-block" style="margin-top: 20px;">
+                    Proceed to Payment <i class="fa-solid fa-arrow-right"></i>
+                </button>
+            </div>
+
+            <!-- Payment Options Step -->
+            <div class="checkout-modal-body hidden" id="checkout-step-2">
+                <button id="btn-back-to-shipping" class="btn btn-close" style="font-size:0.8rem; margin-bottom:10px; padding:0; background:transparent; display:flex; align-items:center; gap:5px;"><i class="fa-solid fa-arrow-left"></i> Back to shipping</button>
+                <h4 style="font-weight:600; font-size:0.95rem; margin-bottom: 15px; color:var(--text-primary);"><i class="fa-solid fa-wallet"></i> Choose Payment Method</h4>
+                
+                <div class="payment-options-list" style="display:flex; flex-direction:column; gap:12px;">
+                    <!-- QR Code option -->
+                    <label class="payment-option-card" style="display:flex; align-items:center; gap:12px; padding:15px; border:1px solid var(--border-color); border-radius:8px; cursor:pointer;">
+                        <input type="radio" name="payment-method" value="QR" checked>
+                        <i class="fa-solid fa-qrcode" style="font-size:1.4rem; color:var(--color-purple);"></i>
+                        <div>
+                           <div style="font-weight:600; font-size:0.9rem; color:var(--text-primary);">Pay by QR Code Scan</div>
+                           <div style="font-size:0.75rem; color:var(--text-secondary);">Scan dynamic QR code on screen</div>
+                        </div>
+                    </label>
+
+                    <!-- UPI ID option -->
+                    <label class="payment-option-card" style="display:flex; align-items:center; gap:12px; padding:15px; border:1px solid var(--border-color); border-radius:8px; cursor:pointer;">
+                        <input type="radio" name="payment-method" value="UPI">
+                        <i class="fa-solid fa-mobile-screen-button" style="font-size:1.4rem; color:var(--color-primary);"></i>
+                        <div>
+                           <div style="font-weight:600; font-size:0.9rem; color:var(--text-primary);">Pay by UPI ID / UPI Apps</div>
+                           <div style="font-size:0.75rem; color:var(--text-secondary);">Direct redirect to GPay, PhonePe, Paytm, BHIM</div>
+                        </div>
+                    </label>
+
+                    <!-- POD option -->
+                    <label class="payment-option-card" style="display:flex; align-items:center; gap:12px; padding:15px; border:1px solid var(--border-color); border-radius:8px; cursor:pointer;">
+                        <input type="radio" name="payment-method" value="POD">
+                        <i class="fa-solid fa-hand-holding-dollar" style="font-size:1.4rem; color:var(--color-success);"></i>
+                        <div>
+                           <div style="font-weight:600; font-size:0.9rem; color:var(--text-primary);">Pay on Delivery (COD)</div>
+                           <div style="font-size:0.75rem; color:var(--text-secondary);">Pay cash/UPI at your doorstep</div>
+                        </div>
+                    </label>
+                </div>
+
+                <!-- Sub-payment areas -->
+                <!-- QR Scan Area -->
+                <div id="payment-qr-area" class="payment-sub-area" style="margin-top:20px; text-align:center; padding:15px; border: 1px dashed var(--border-color); border-radius:8px; background:rgba(255,255,255,0.6);">
+                    <div style="font-weight:600; font-size:0.85rem; margin-bottom:10px; color:var(--text-primary);">Scan to Pay ₹<span class="pay-amount-label">0.00</span></div>
+                    <img id="qr-code-img" src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=upi://pay" alt="Scan QR Code" style="width:130px; height:130px; border:1px solid #ccc; padding:5px; background:#fff; margin:0 auto; display:block;">
+                    <div style="font-size:0.7rem; color:var(--text-secondary); margin-top:8px;">Valid for 5 minutes. Real order will generate upon payment check.</div>
+                </div>
+
+                <!-- UPI Redirect Area -->
+                <div id="payment-upi-area" class="payment-sub-area hidden" style="margin-top:20px;">
+                    <div class="input-group">
+                        <label>Enter UPI ID (e.g. name@okhdfcbank)</label>
+                        <div style="display:flex; gap:10px;">
+                            <input type="text" id="input-upi-id" placeholder="yourname@upi" style="flex:1;">
+                            <button id="btn-verify-upi" class="btn btn-secondary" style="padding: 10px 15px;">Verify</button>
+                        </div>
+                    </div>
+                    <div style="margin-top: 15px; font-weight: 600; font-size: 0.8rem; text-align: center; color:var(--text-secondary);">- OR Pay Directly via Apps -</div>
+                    <div style="display:grid; grid-template-columns:1fr 1fr; gap:10px; margin-top:10px;">
+                        <button class="btn btn-secondary btn-upi-app" data-app="gpay" style="padding:10px;"><i class="fa-solid fa-mobile-screen" style="color:#4285F4; font-size:1.1rem;"></i> Google Pay</button>
+                        <button class="btn btn-secondary btn-upi-app" data-app="phonepe" style="padding:10px;"><i class="fa-solid fa-mobile-screen" style="color:#5f259f; font-size:1.1rem;"></i> PhonePe</button>
+                        <button class="btn btn-secondary btn-upi-app" data-app="paytm" style="padding:10px;"><i class="fa-solid fa-mobile-screen" style="color:#00baf2; font-size:1.1rem;"></i> Paytm</button>
+                        <button class="btn btn-secondary btn-upi-app" data-app="bhim" style="padding:10px;"><i class="fa-solid fa-mobile-screen" style="color:#e05b1f; font-size:1.1rem;"></i> BHIM UPI</button>
+                    </div>
+                </div>
+
+                <!-- Pay on Delivery Area -->
+                <div id="payment-pod-area" class="payment-sub-area hidden" style="margin-top:20px; padding:12px; background:rgba(16,185,129,0.05); border:1px solid rgba(16,185,129,0.15); border-radius:8px;">
+                    <p style="font-size:0.8rem; color:#069669; line-height:1.4; display:flex; align-items:flex-start; gap:8px; margin:0;">
+                        <i class="fa-solid fa-circle-info" style="margin-top:3px;"></i>
+                        No advanced payment required. You will be redirected to confirm and complete your order. Pay by cash or mobile UPI during delivery.
+                    </p>
+                </div>
+
+                <!-- Processing overlay -->
+                <div id="payment-redirecting-screen" class="hidden" style="text-align:center; padding: 20px 0;">
+                    <i class="fa-solid fa-spinner fa-spin text-purple" style="font-size:3rem; margin-bottom:15px; color:var(--color-purple);"></i>
+                    <h4 id="redirect-app-title" style="font-weight:700; color:var(--text-primary);">Redirecting to GPay...</h4>
+                    <p style="font-size:0.8rem; color:var(--text-secondary); margin-top:5px;">Please authorize the payment in your mobile app. We will auto-detect the payment status once done.</p>
+                </div>
+
+                <button id="btn-complete-order" class="btn btn-primary btn-block" style="margin-top: 25px;">
+                    Complete Order & Pay
+                </button>
+            </div>
+            
+            <!-- Invoice/Success Step -->
+            <div class="checkout-modal-body hidden" id="checkout-step-3">
+                <div style="text-align:center; padding: 20px 0;">
+                    <i class="fa-solid fa-circle-check text-success" style="font-size:4rem; margin-bottom:15px; color:var(--color-success);"></i>
+                    <h3 style="font-weight:800; color:var(--text-primary);">Order Placed Successfully!</h3>
+                    <p style="font-size:0.85rem; color:var(--text-secondary); margin-top:5px;">Your invoice has been generated and your shoes are package-ready!</p>
+                </div>
+
+                <div class="invoice-card" style="border: 1px solid var(--border-color); border-radius:8px; padding:18px; background:rgba(255,255,255,0.9); margin-top:15px;">
+                    <div style="display:flex; justify-content:space-between; border-bottom:1px dashed var(--border-color); padding-bottom:10px; margin-bottom:10px;">
+                        <span style="font-size:0.75rem; font-weight:700; color:var(--text-secondary);">INVOICE NO:</span>
+                        <span id="invoice-id" style="font-family:var(--font-mono); font-size:0.8rem; font-weight:700; color:var(--text-primary);">INV-XXXXXX</span>
+                    </div>
+                    <div style="font-size:0.8rem; line-height:1.6; color:var(--text-primary);">
+                        <div>Item: <strong id="invoice-item-name">Nike Air Max</strong></div>
+                        <div>Specs: <span id="invoice-item-specs">Size 9 | Color White</span></div>
+                        <div>Payment Method: <span id="invoice-payment-method" style="font-weight:600; color:var(--color-purple);">QR CODE</span></div>
+                        <div style="margin-top:8px; border-top:1px solid #eee; padding-top:8px; display:flex; justify-content:space-between; font-size:0.9rem;">
+                            <strong>Total Amount:</strong>
+                            <strong id="invoice-item-price" style="color:var(--color-primary);">₹0.00</strong>
+                        </div>
+                    </div>
+                </div>
+
+                <button id="btn-close-invoice" class="btn btn-purple btn-block" style="margin-top: 25px;">
+                    Continue Shopping
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- ================= TRACK ORDERS MODAL ================= -->
+    <div id="orders-modal" class="modal-overlay hidden">
+        <div class="confirm-card" style="max-width: 580px; text-align: left;">
+            <div class="modal-header" style="margin-bottom: 20px; display:flex; justify-content:space-between; align-items:center;">
+                <h3><i class="fa-solid fa-truck-fast text-purple"></i> Track Your Orders</h3>
+                <button id="btn-close-orders" class="btn btn-close"><i class="fa-solid fa-xmark"></i></button>
+            </div>
+            
+            <div class="orders-modal-body" style="max-height: 480px; overflow-y: auto; padding-right: 5px;">
+                <div id="orders-list-container" class="orders-list-container" style="display:flex; flex-direction:column; gap:12px;">
+                    <!-- Dynamically populated orders list -->
+                </div>
+                
+                <!-- Tracking Detail Stepper (Initially Hidden) -->
+                <div id="tracking-detail-container" class="hidden" style="margin-top: 25px; border-top: 1px solid var(--border-color); padding-top: 20px;">
+                    <button id="btn-back-to-orders" class="btn btn-close" style="font-size:0.8rem; margin-bottom:15px; padding:0; background:transparent; display:flex; align-items:center; gap:5px;"><i class="fa-solid fa-arrow-left"></i> Back to orders</button>
+                    
+                    <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:20px;">
+                        <div>
+                            <h4 style="font-weight:700; font-size:0.95rem; margin:0;" id="track-order-id">Order ORD-XXXX</h4>
+                            <span id="track-order-item" style="font-size:0.75rem; color:var(--text-secondary);">Nike Air Max | Size 9</span>
+                        </div>
+                        <div id="track-order-delivery" style="text-align:right; font-size:0.75rem; color:var(--text-secondary);">Expected: 2026-07-02</div>
+                    </div>
+
+                    <!-- Visual Tracking Stepper -->
+                    <div class="tracking-stepper" style="position:relative; display:flex; flex-direction:column; gap:25px; padding-left:30px; margin-top:20px;">
+                        <div class="stepper-line" style="position:absolute; left:9px; top:10px; bottom:10px; width:2px; background:var(--border-color); z-index:1;"></div>
+                        
+                        <!-- Step 1: Order Placed -->
+                        <div class="step-item" id="step-placed" style="position:relative; z-index:2; display:flex; gap:15px;">
+                            <div class="step-icon" style="position:absolute; left:-30px; width:20px; height:20px; border-radius:50%; background:var(--border-color); border:4px solid var(--background-dark); display:flex; align-items:center; justify-content:center;"></div>
+                            <div>
+                                <div style="font-weight:700; font-size:0.85rem; color:var(--text-primary);">Order Placed</div>
+                                <div style="font-size:0.75rem; color:var(--text-secondary);">Your order was successfully submitted.</div>
+                            </div>
+                        </div>
+
+                        <!-- Step 2: Payment Verified -->
+                        <div class="step-item" id="step-paid" style="position:relative; z-index:2; display:flex; gap:15px;">
+                            <div class="step-icon" style="position:absolute; left:-30px; width:20px; height:20px; border-radius:50%; background:var(--border-color); border:4px solid var(--background-dark); display:flex; align-items:center; justify-content:center;"></div>
+                            <div>
+                                <div style="font-weight:700; font-size:0.85rem; color:var(--text-primary);">Payment Processed</div>
+                                <div id="track-payment-status" style="font-size:0.75rem; color:var(--text-secondary);">Payment Status: Verified (PAID)</div>
+                            </div>
+                        </div>
+
+                        <!-- Step 3: Dispatched -->
+                        <div class="step-item" id="step-dispatched" style="position:relative; z-index:2; display:flex; gap:15px;">
+                            <div class="step-icon" style="position:absolute; left:-30px; width:20px; height:20px; border-radius:50%; background:var(--border-color); border:4px solid var(--background-dark); display:flex; align-items:center; justify-content:center;"></div>
+                            <div>
+                                <div style="font-weight:700; font-size:0.85rem; color:var(--text-primary);">Dispatched for Delivery</div>
+                                <div style="font-size:0.75rem; color:var(--text-secondary);">Item left fulfillment center.</div>
+                            </div>
+                        </div>
+
+                        <!-- Step 4: Out for Delivery -->
+                        <div class="step-item" id="step-out" style="position:relative; z-index:2; display:flex; gap:15px;">
+                            <div class="step-icon" style="position:absolute; left:-30px; width:20px; height:20px; border-radius:50%; background:var(--border-color); border:4px solid var(--background-dark); display:flex; align-items:center; justify-content:center;"></div>
+                            <div>
+                                <div style="font-weight:700; font-size:0.85rem; color:var(--text-primary);">Out for Delivery</div>
+                                <div style="font-size:0.75rem; color:var(--text-secondary);">Courier agent is bringing the package to your address.</div>
+                            </div>
+                        </div>
+
+                        <!-- Step 5: Delivered -->
+                        <div class="step-item" id="step-delivered" style="position:relative; z-index:2; display:flex; gap:15px;">
+                            <div class="step-icon" style="position:absolute; left:-30px; width:20px; height:20px; border-radius:50%; background:var(--border-color); border:4px solid var(--background-dark); display:flex; align-items:center; justify-content:center;"></div>
+                            <div>
+                                <div style="font-weight:700; font-size:0.85rem; color:var(--text-primary);">Delivered</div>
+                                <div style="font-size:0.75rem; color:var(--text-secondary);">Package handed to resident.</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ================= MANUAL ORDER FORM MODAL ================= -->
+    <div id="manual-order-modal" class="modal-overlay hidden">
+        <div class="confirm-card" style="max-width: 680px; text-align: left; width:95%;">
+            <div class="modal-header" style="margin-bottom: 15px; display:flex; justify-content:space-between; align-items:center;">
+                <h3><i class="fa-solid fa-cart-shopping text-purple"></i> Place Manual Order</h3>
+                <button id="btn-close-manual-order" class="btn btn-close"><i class="fa-solid fa-xmark"></i></button>
+            </div>
+            
+            <!-- Step 1: Category Chooser Screen -->
+            <div id="manual-step-chooser" class="manual-wizard-step">
+                <h4 style="font-weight:600; font-size:1rem; margin-bottom: 20px; color:var(--text-primary); text-align:center;">Which type of footwear do you want?</h4>
+                <div class="footwear-category-grid" style="display:grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 15px; max-height:450px; overflow-y:auto; padding:5px;">
+                    
+                    <!-- Slippers Card -->
+                    <div class="footwear-cat-card" data-category="Slippers" style="background: rgba(255,255,255,0.03); border:1px solid var(--border-color); border-radius:10px; overflow:hidden; cursor:pointer; text-align:center; transition:all 0.2s;">
+                        <img src="images/slippers.png" alt="Slippers" style="width:100%; height:130px; object-fit:cover; border-bottom:1px solid var(--border-color);">
+                        <div style="padding:10px; font-weight:700; font-size:0.85rem; color:var(--text-primary);">Slippers</div>
+                    </div>
+
+                    <!-- Sandals Card -->
+                    <div class="footwear-cat-card" data-category="Sandals" style="background: rgba(255,255,255,0.03); border:1px solid var(--border-color); border-radius:10px; overflow:hidden; cursor:pointer; text-align:center; transition:all 0.2s;">
+                        <img src="images/premium_sandals_1782566246833.png" alt="Sandals" style="width:100%; height:130px; object-fit:cover; border-bottom:1px solid var(--border-color);">
+                        <div style="padding:10px; font-weight:700; font-size:0.85rem; color:var(--text-primary);">Sandals</div>
+                    </div>
+
+                    <!-- Shoes Card -->
+                    <div class="footwear-cat-card" data-category="Shoes" style="background: rgba(255,255,255,0.03); border:1px solid var(--border-color); border-radius:10px; overflow:hidden; cursor:pointer; text-align:center; transition:all 0.2s;">
+                        <img src="images/shoes.png" alt="Shoes" style="width:100%; height:130px; object-fit:cover; border-bottom:1px solid var(--border-color);">
+                        <div style="padding:10px; font-weight:700; font-size:0.85rem; color:var(--text-primary);">Shoes</div>
+                    </div>
+
+                    <!-- Party Wear Heels Card -->
+                    <div class="footwear-cat-card" data-category="Party Wear Heels" style="background: rgba(255,255,255,0.03); border:1px solid var(--border-color); border-radius:10px; overflow:hidden; cursor:pointer; text-align:center; transition:all 0.2s;">
+                        <img src="images/heels.png" alt="Party Wear Heels" style="width:100%; height:130px; object-fit:cover; border-bottom:1px solid var(--border-color);">
+                        <div style="padding:10px; font-weight:700; font-size:0.85rem; color:var(--text-primary);">Party Wear Heels</div>
+                    </div>
+
+                    <!-- Long Boots Card -->
+                    <div class="footwear-cat-card" data-category="Long Boots" style="background: rgba(255,255,255,0.03); border:1px solid var(--border-color); border-radius:10px; overflow:hidden; cursor:pointer; text-align:center; transition:all 0.2s;">
+                        <img src="images/boots.png" alt="Long Boots" style="width:100%; height:130px; object-fit:cover; border-bottom:1px solid var(--border-color);">
+                        <div style="padding:10px; font-weight:700; font-size:0.85rem; color:var(--text-primary);">Long Boots</div>
+                    </div>
+
+                    <!-- Short Boots Card -->
+                    <div class="footwear-cat-card" data-category="Short Boots" style="background: rgba(255,255,255,0.03); border:1px solid var(--border-color); border-radius:10px; overflow:hidden; cursor:pointer; text-align:center; transition:all 0.2s;">
+                        <img src="images/boots.png" alt="Short Boots" style="width:100%; height:130px; object-fit:cover; border-bottom:1px solid var(--border-color);">
+                        <div style="padding:10px; font-weight:700; font-size:0.85rem; color:var(--text-primary);">Short Boots</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Step 2: Category Product Catalog Screen -->
+            <div id="manual-step-catalog" class="manual-wizard-step hidden">
+                <button id="btn-back-to-chooser" class="btn btn-close" style="font-size:0.8rem; margin-bottom:15px; padding:0; background:transparent; display:flex; align-items:center; gap:5px; color:var(--text-secondary);"><i class="fa-solid fa-arrow-left"></i> Back to Categories</button>
+                <h4 style="font-weight:600; font-size:0.95rem; margin-bottom: 15px; color:var(--text-primary);" id="manual-catalog-header">Available Items</h4>
+                
+                <div id="manual-catalog-grid" style="display:grid; grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); gap: 15px; max-height:420px; overflow-y:auto; padding:5px;">
+                    <!-- Dynamically populated category shoes with images -->
+                </div>
+            </div>
+
+            <!-- Step 3: Specification Selector Screen -->
+            <div id="manual-step-specs" class="manual-wizard-step hidden">
+                <button id="btn-back-to-catalog" class="btn btn-close" style="font-size:0.8rem; margin-bottom:15px; padding:0; background:transparent; display:flex; align-items:center; gap:5px; color:var(--text-secondary);"><i class="fa-solid fa-arrow-left"></i> Back to Catalog</button>
+                <h4 style="font-weight:600; font-size:0.95rem; margin-bottom: 15px; color:var(--text-primary);">Configure Item Specifications</h4>
+                
+                <div style="display:flex; gap:15px; flex-wrap:wrap;">
+                    <!-- Image Showcase -->
+                    <div style="flex:1; min-width:200px; text-align:center;">
+                        <img id="manual-spec-item-img" src="images/shoes.png" alt="Showcase" style="width:100%; max-height:180px; object-fit:contain; border-radius:8px; border:1px solid var(--border-color); background:rgba(255,255,255,0.01);">
+                        <h4 id="manual-spec-item-name" style="margin-top:10px; font-weight:700; color:var(--text-primary);">Model Name</h4>
+                    </div>
+
+                    <!-- Dropdowns -->
+                    <div style="flex:1.2; min-width:220px;">
+                        <div class="input-group">
+                            <label><i class="fa-solid fa-tags"></i> Brand</label>
+                            <input type="text" id="manual-spec-brand" readonly style="background:rgba(255,255,255,0.04); color:#aaa; cursor:not-allowed; padding:10px; border-radius:6px; border:1px solid var(--border-color); width:100%; margin-top:5px;">
+                        </div>
+                        
+                        <div class="input-group" style="margin-top:10px;">
+                            <label><i class="fa-solid fa-palette"></i> Select Color</label>
+                            <select id="manual-select-color" class="form-control" style="background:#1f2937; color:#fff; border:1px solid var(--border-color); padding:10px; width:100%; border-radius:6px; margin-top:5px;">
+                                <option value="">-- Choose Color --</option>
+                            </select>
+                        </div>
+                        
+                        <div class="input-group" style="margin-top:10px;">
+                            <label><i class="fa-solid fa-ruler"></i> Select Size</label>
+                            <select id="manual-select-size" class="form-control" style="background:#1f2937; color:#fff; border:1px solid var(--border-color); padding:10px; width:100%; border-radius:6px; margin-top:5px;">
+                                <option value="">-- Choose Size --</option>
+                            </select>
+                        </div>
+
+                        <!-- Availability Card -->
+                        <div id="manual-availability-card" class="hidden" style="margin-top: 15px; padding:12px; border-radius:8px; border:1px solid var(--border-color); background:rgba(255,255,255,0.02);">
+                            <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:5px;">
+                                <span id="manual-availability-badge" class="badge">Checking...</span>
+                                <strong id="manual-item-price" style="font-family:var(--font-heading); font-size:1.1rem; color:var(--color-primary);">₹0.00</strong>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <button id="btn-manual-order-buy" class="btn btn-primary btn-block" style="margin-top: 25px;" disabled>
+                    <i class="fa-solid fa-bag-shopping"></i> Order Now (Configure Specs)
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/app.js"></script>
+</body>
+</html>
